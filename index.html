@@ -15,15 +15,15 @@
 
 <body>
     <style>
+        html {
+            user-select: none;
+        }
+
         body {
             margin: 0;
             width: 100%;
             height: 100dvh;
             overflow: hidden;
-        }
-
-        * {
-            user-select: none;
         }
 
         .entrance,
@@ -457,7 +457,6 @@
 
         // 使用禮物 action
         $(".main-container").on("taphold", " .box:not(.back)", function (event) {
-            event.stopPropagation();
             if ($(".main-container > .box.back").length === 0) {
                 var target = $(event.currentTarget);
                 if (!target.hasClass("used")) {
