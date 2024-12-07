@@ -17,6 +17,9 @@
     <style>
         body {
             margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
         }
 
         .entrance,
@@ -387,14 +390,12 @@
     </div>
 
     <script>
-
         var userConfig = getConfig();
 
         if (userConfig.ShowGetGiftBtn === "Y") {
             $(".entrance").show();
             $(".main-container > .box").addClass("first-look");
-        }
-        else {
+        } else {
             showGiftBlock();
         }
 
@@ -417,8 +418,7 @@
                 // 翻過卡片
                 if (userConfig.Gift[id].IsOpen === "N") {
                     targetElement.addClass("back");
-                }
-                else {
+                } else {
                     targetElement.find(">.content>p").show();
                     targetElement.find(">.content>p").css("opacity", "1");
                 }
@@ -428,7 +428,7 @@
                 if (useTime !== "") {
                     targetElement.find(">.stamp").text(useTime + " 已使用");
                     setTimeout(function () {
-                    targetElement.addClass("used");
+                        targetElement.addClass("used");
                     }, 100);
                 }
             }
@@ -525,8 +525,7 @@
                     }
                 }
                 window.localStorage.setItem("config", JSON.stringify(config));
-            }
-            else {
+            } else {
                 config = JSON.parse(config);
             }
 
