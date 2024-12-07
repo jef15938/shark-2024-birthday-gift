@@ -1,0 +1,548 @@
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>鯊宜的2024生日禮物</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.5.0-rc1/jquery.mobile-1.5.0-rc1.min.js"></script>
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .entrance,
+        .main-container {
+            /* width: 100%; */
+            /* height: 100%; */
+        }
+
+        .entrance {
+            display: none;
+            background: linear-gradient(45deg, rgba(55, 184, 78, 1) 0%, rgba(0, 121, 255, 1) 50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            animation-name: appear;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+        }
+
+        .entrance>.btn {
+            font-size: 30px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 30px;
+            border-radius: 24px;
+            font-weight: bolder;
+            color: rgb(62, 62, 249);
+            border: 5px solid rgb(62, 62, 249);
+        }
+
+        .entrance>.btn:active {
+            transform: translate(2px, 2px);
+        }
+
+        .main-container {
+            background: black;
+            padding: 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity ease-in 1.6s;
+        }
+
+        .main-container .box {
+            display: none;
+            position: relative;
+            width: calc(100vw - 32px);
+            height: calc((100vh - 64px) / 5);
+            color: #fff;
+            background-color: #111;
+            /* display: flex; */
+            align-items: center;
+            transition: 0.5s;
+        }
+
+        .main-container .box.first-look {
+            opacity: 0;
+            animation-name: appear;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+        }
+
+        .main-container .box.first-look:nth-child(1) {
+            animation-delay: 1.5s;
+        }
+
+        .main-container .box.first-look:nth-child(2) {
+            animation-delay: 2s;
+        }
+
+        .main-container .box.first-look:nth-child(3) {
+            animation-delay: 2.5s;
+        }
+
+        .main-container .box.first-look:nth-child(4) {
+            animation-delay: 3s;
+        }
+
+        .main-container .box.first-look:nth-child(5) {
+            animation-delay: 3.5s;
+        }
+
+        .main-container .box+.box {
+            margin-top: 8px;
+        }
+
+        .main-container .box:active {
+            /* transform: translate(6px, 6px); */
+        }
+
+        .main-container .box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+        }
+
+        .main-container .box::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            filter: blur(30px);
+            border-radius: 16px;
+        }
+
+        .main-container .box:nth-child(1)::before,
+        .main-container .box:nth-child(1)::after,
+        .main-container .box:nth-child(1) span::before,
+        .main-container .box:nth-child(1) span::after {
+            /* background: linear-gradient(45deg, #ffbc00, #ff0058); */
+            background: #ffbc00;
+        }
+
+        .main-container .box:nth-child(1)>.stamp {
+            color: #ffbc00;
+            border-color: #ffbc00;
+        }
+
+        .main-container .box:nth-child(2)::before,
+        .main-container .box:nth-child(2)::after,
+        .main-container .box:nth-child(2) span::before,
+        .main-container .box:nth-child(2) span::after {
+            /* background: linear-gradient(45deg, #03a9f4, #ff0058); */
+            background: #03a9f4;
+        }
+
+        .main-container .box:nth-child(2)>.stamp {
+            color: #03a9f4;
+            border-color: #03a9f4;
+        }
+
+        .main-container .box:nth-child(3)::before,
+        .main-container .box:nth-child(3)::after,
+        .main-container .box:nth-child(3) span::before,
+        .main-container .box:nth-child(3) span::after {
+            /* background: linear-gradient(45deg, #4dff03, #00d0ff); */
+            background: #4dff03;
+        }
+
+        .main-container .box:nth-child(3)>.stamp {
+            color: #4dff03;
+            border-color: #4dff03;
+        }
+
+        .main-container .box:nth-child(4)::before,
+        .main-container .box:nth-child(4)::after,
+        .main-container .box:nth-child(4) span::before,
+        .main-container .box:nth-child(4) span::after {
+            background: #fd5050;
+            /* background: linear-gradient(45deg, #de0ed7, #8df604); */
+        }
+
+        .main-container .box:nth-child(4)>.stamp {
+            color: #fd5050;
+            border-color: #fd5050;
+        }
+
+        .main-container .box:nth-child(5)::before,
+        .main-container .box:nth-child(5)::after,
+        .main-container .box:nth-child(5) span::before,
+        .main-container .box:nth-child(5) span::after {
+            /* background: linear-gradient(45deg, #ff2d03, #00d0ff); */
+            background: #735ee9;
+        }
+
+        .main-container .box:nth-child(5)>.stamp {
+            color: #735ee9;
+            border-color: #735ee9;
+        }
+
+        .main-container .box span {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            right: 16px;
+            bottom: 16px;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 2;
+            border-radius: 16px;
+        }
+
+        .main-container .box.back span::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: calc(50% - 8px);
+            bottom: 0px;
+            width: 16px;
+        }
+
+        .main-container .box.back span::after {
+            content: "";
+            position: absolute;
+            top: calc(50% - 8px);
+            left: 0;
+            right: 0;
+            bottom: 0px;
+            width: 100%;
+            height: 16px;
+        }
+
+        .main-container .box .content {
+            position: relative;
+            z-index: 10;
+            padding: 20px 20px 20px 36px;
+        }
+
+        .main-container .box .content h2>a {
+            text-decoration: none;
+            font-size: 80px;
+            color: #fff;
+            position: absolute;
+            left: 40px;
+            top: 0;
+            margin: 0;
+        }
+
+        .main-container .box .content p {
+            font-size: 16px;
+            color: #fff;
+            margin-left: 90px;
+            position: relative;
+        }
+
+        .main-container .box.first-open .content p {
+            opacity: 0;
+            animation-name: appear;
+            animation-duration: 2s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        /* 背面 */
+        .main-container .box.back {
+            transform: rotateY(180deg);
+        }
+
+        .main-container .box.back>.content {
+            display: none;
+        }
+
+        /* stamp */
+        .main-container .box>.stamp {
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            z-index: 8;
+            font-size: 20px;
+            transform: rotate(5deg);
+            font-weight: bold;
+            border: 3px solid transparent;
+            padding: 3px;
+            box-shadow: -5px 5px black;
+            transition: top ease-out 0.5s, right ease-out 0.5s;
+        }
+
+        .main-container .box:not(.back).used>.stamp {
+            opacity: 1;
+            pointer-events: auto;
+            top: 27px;
+            right: 22px;
+        }
+
+        /* hashtag */
+        .main-container .box:nth-child(1) .content p::before,
+        .main-container .box:nth-child(2) .content p::before,
+        .main-container .box:nth-child(3) .content p::before,
+        .main-container .box:nth-child(4) .content p::before,
+        .main-container .box:nth-child(5) .content p::before {
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -100%;
+            color: #6db3f9;
+            font-weight: bolder;
+            white-space: nowrap;
+        }
+
+        .main-container .box:nth-child(1) .content p::before {
+            content: "#沉浸式實境解謎 #松菸";
+        }
+
+        .main-container .box:nth-child(2) .content p::before {
+            content: "#Chill感滿滿的餐廳 #信義區";
+        }
+
+        .main-container .box:nth-child(3) .content p::before {
+            content: "#阿掌的早晨日常!? #大安區";
+        }
+
+        .main-container .box:nth-child(4) .content p::before {
+            content: "#鯊宜開心果 #延吉街";
+        }
+
+        .main-container .box:nth-child(5) .content p::before {
+            content: "#就是彌生軒 #下班 5 分鐘";
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <div class="entrance">
+        <input class="btn" type="button" value="領取生日禮物">
+    </div>
+    <div class="main-container">
+        <div class="box" id="M">
+            <span></span>
+            <div class="content">
+                <h2><a href="https://www.tikipoki.com.tw/portfolio/goblet-of-soul-wonderland/" target="_blank">M</a>
+                </h2>
+                <p>ISS GAME-幻隱光靈：仙蹤</p>
+            </div>
+            <div class="stamp">已使用</div>
+        </div>
+        <div class="box" id="A">
+            <span></span>
+            <div class="content">
+                <h2><a href="https://maps.app.goo.gl/o14GAJDa4PSLzBxw8" target="_blank">A&nbsp;</a></h2>
+                <p>BEACH-海灘叢林</p>
+            </div>
+            <div class="stamp">已使用</div>
+        </div>
+        <div class="box" id="N">
+            <span></span>
+            <div class="content">
+                <h2><a href="https://maps.app.goo.gl/V1B5xRCNLRACdWzu5" target="_blank">N</a></h2>
+                <p>AP TEA-再睡5分鐘 x 2</p>
+            </div>
+            <div class="stamp">已使用</div>
+        </div>
+        <div class="box" id="D">
+            <span></span>
+            <div class="content">
+                <h2><a href="https://maps.app.goo.gl/3qWdbUMurdpRyQAeA" target="_blank">D</a></h2>
+                <p>oubleV-冰淇淋</p>
+            </div>
+            <div class="stamp">已使用</div>
+        </div>
+        <div class="box" id="Y">
+            <span></span>
+            <div class="content">
+                <h2><a href="https://maps.app.goo.gl/HJqbE65voJi4xRa88" target="_blank">Y</a></h2>
+                <p>AYOI-彌生軒</p>
+            </div>
+            <div class="stamp">已使用</div>
+        </div>
+    </div>
+
+    <script>
+
+        var userConfig = getConfig();
+
+        if (userConfig.ShowGetGiftBtn === "Y") {
+            $(".entrance").show();
+            $(".main-container > .box").addClass("first-look");
+        }
+        else {
+            showGiftBlock();
+        }
+
+
+        // 是否顯示領取禮物按鈕
+        $(".entrance > .btn").on("click", function () {
+            $(".entrance > .btn").hide();
+            // $(".main-container").show();
+            showGiftBlock();
+
+            userConfig.ShowGetGiftBtn = "N";
+            window.localStorage.setItem("config", JSON.stringify(userConfig));
+        });
+
+        // 是否翻過卡片及使用禮物
+        $(".main-container > .box").each(function (index, element) {
+            var targetElement = $(element);
+            var id = targetElement.attr("id");
+            if (id) {
+                // 翻過卡片
+                if (userConfig.Gift[id].IsOpen === "N") {
+                    targetElement.addClass("back");
+                }
+                else {
+                    targetElement.find(">.content>p").show();
+                    targetElement.find(">.content>p").css("opacity", "1");
+                }
+
+                // 使用禮物
+                var useTime = userConfig.Gift[id].UseTime;
+                if (useTime !== "") {
+                    targetElement.find(">.stamp").text(useTime + " 已使用");
+                    setTimeout(function () {
+                    targetElement.addClass("used");
+                    }, 100);
+                }
+            }
+        });
+
+        // 翻卡片 action
+        $(".main-container > .box").on("click", function (event) {
+            var target = $(event.currentTarget);
+            var id = target.attr("id");
+            if (target.hasClass("back") && id) {
+                userConfig.Gift[id].IsOpen = "Y";
+                window.localStorage.setItem("config", JSON.stringify(userConfig));
+                target.addClass("first-open");
+                target.removeClass("back");
+                setTimeout(function () {
+                    target.find(".content").show();
+                }, 300);
+                event.stopPropagation();
+            }
+        });
+
+        // 使用禮物 action
+        $(".main-container").on("taphold", " .box:not(.back)", function (event) {
+            if ($(".main-container > .box.back").length === 0) {
+                var target = $(event.currentTarget);
+                if (!target.hasClass("used")) {
+                    customConfirm(target);
+                }
+            }
+        });
+
+        function showGiftBlock() {
+            $(".main-container").css("opacity", "1");
+            $(".main-container").css("pointer-events", "auto");
+            $(".main-container > .box").css("display", "flex");
+        }
+
+        function customConfirm(boxElement) {
+            var text = boxElement.find(".content").find("h2>a,p").text().trim();
+            $.confirm({
+                title: '提示',
+                content: `確定要使用「${text}」嗎？`,
+                buttons: {
+                    confirm: {
+                        text: '確認',
+                        action: function () {
+                            use(boxElement);
+                        }
+                    },
+                    cancel: {
+                        text: '取消',
+                    }
+                }
+            });
+        }
+
+        function use(boxElement) {
+            var useID = boxElement.attr("id");
+            if (useID) {
+                var useTime = new Date().toISOString().split('T')[0].replaceAll("-", "/");
+                userConfig.Gift[useID].UseTime = useTime;
+                window.localStorage.setItem("config", JSON.stringify(userConfig));
+                boxElement.find(">.stamp").text(useTime + " 已使用");
+                boxElement.addClass("used");
+            }
+        }
+
+        function getConfig() {
+            var config = window.localStorage.getItem("config");
+            if (config === null) {
+                config = {
+                    ShowGetGiftBtn: "Y",
+                    Gift: {
+                        M: {
+                            IsOpen: "N",
+                            UseTime: ""
+                        },
+                        A: {
+                            IsOpen: "N",
+                            UseTime: ""
+                        },
+                        N: {
+                            IsOpen: "N",
+                            UseTime: ""
+                        },
+                        D: {
+                            IsOpen: "N",
+                            UseTime: ""
+                        },
+                        Y: {
+                            IsOpen: "N",
+                            UseTime: ""
+                        }
+                    }
+                }
+                window.localStorage.setItem("config", JSON.stringify(config));
+            }
+            else {
+                config = JSON.parse(config);
+            }
+
+            return config;
+        }
+
+
+
+        // $(".entrance > .btn").on("click",  function() {
+        //     $(".entrance > .btn").hide();
+        //     $(".main-container").css("opacity", "1");
+        //     $(".main-container").css("pointer-events", "auto");
+        // })
+    </script>
+</body>
+
+
+
+</html>
