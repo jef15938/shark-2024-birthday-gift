@@ -413,7 +413,6 @@
         // 是否顯示領取禮物按鈕
         $(".entrance > .btn").on("click", function () {
             $(".entrance > .btn").hide();
-            // $(".main-container").show();
             showGiftBlock();
 
             userConfig.ShowGetGiftBtn = "N";
@@ -503,6 +502,30 @@
                 window.localStorage.setItem("config", JSON.stringify(userConfig));
                 boxElement.find(">.stamp").text(useTime + " 已使用");
                 boxElement.addClass("used");
+
+                // 若全部用完
+                if (userConfig.HasSeenCompleteMsg === "N") {
+                    var giftLength = $(".main-container > .box").length;
+                    var usedGiftLength = Object.entries(userConfig.Gift).map(x => x[1]).filter(x => x.UseTime).length;
+                    if (giftLength === usedGiftLength) {
+                        setTimeout(function () {
+                            $.alert({
+                                title: '哈嚕鯊宜~',
+                                content: '恭喜妳把禮物兌換完畢。<br><br>我們要一直一直幸福下去喔!!!<br><br>最愛妳囉~很愛很愛喔❤️',
+                                buttons: {
+                                    confirm: {
+                                        text: '鯊宜也最愛阿掌囉 ❤️',
+                                        action: function () {
+                                            userConfig.HasSeenCompleteMsg = "Y";
+                                            window.localStorage.setItem("config", JSON.stringify(
+                                                userConfig));
+                                        }
+                                    }
+                                }
+                            });
+                        }, 1000);
+                    }
+                }
             }
         }
 
@@ -532,7 +555,8 @@
                             IsOpen: "N",
                             UseTime: ""
                         }
-                    }
+                    },
+                    HasSeenCompleteMsg: "N"
                 }
                 window.localStorage.setItem("config", JSON.stringify(config));
             } else {
@@ -541,14 +565,6 @@
 
             return config;
         }
-
-
-
-        // $(".entrance > .btn").on("click",  function() {
-        //     $(".entrance > .btn").hide();
-        //     $(".main-container").css("opacity", "1");
-        //     $(".main-container").css("pointer-events", "auto");
-        // })
     </script>
 </body>
 
