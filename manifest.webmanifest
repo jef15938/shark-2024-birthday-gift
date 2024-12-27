@@ -1,0 +1,17 @@
+{
+  "name": "Shark PWA",
+  "short_name": "鯊宜的2024",
+  "description": "鯊宜的2024",
+  "scope": "/shark-2024-birthday-gift/",
+  "start_url": "/shark-2024-birthday-gift/",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "display": "standalone", 
+  "icons": [
+      {
+        "src": "/shark.jpg",
+        "type": "image/jpg",
+        "sizes": "400x400"
+      }
+  ]
+}
