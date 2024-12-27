@@ -9,7 +9,7 @@
   "display": "standalone", 
   "icons": [
       {
-        "src": "/shark.jpg",
+        "src": "./shark.jpg",
         "type": "image/jpg",
         "sizes": "400x400"
       }
