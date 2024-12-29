@@ -533,28 +533,54 @@
         function getConfig() {
             var config = window.localStorage.getItem("config");
             if (config === null) {
+                // config = {
+                //     ShowGetGiftBtn: "Y",
+                //     Gift: {
+                //         M: {
+                //             IsOpen: "N",
+                //             UseTime: ""
+                //         },
+                //         A: {
+                //             IsOpen: "N",
+                //             UseTime: ""
+                //         },
+                //         N: {
+                //             IsOpen: "N",
+                //             UseTime: ""
+                //         },
+                //         D: {
+                //             IsOpen: "N",
+                //             UseTime: ""
+                //         },
+                //         Y: {
+                //             IsOpen: "N",
+                //             UseTime: ""
+                //         }
+                //     },
+                //     HasSeenCompleteMsg: "N"
+                // }
                 config = {
-                    ShowGetGiftBtn: "Y",
+                    ShowGetGiftBtn: "N",
                     Gift: {
                         M: {
-                            IsOpen: "N",
-                            UseTime: ""
+                            IsOpen: "Y",
+                            UseTime: "2024/12/16"
                         },
                         A: {
-                            IsOpen: "N",
-                            UseTime: ""
+                            IsOpen: "Y",
+                            UseTime: "2024/12/09"
                         },
                         N: {
-                            IsOpen: "N",
-                            UseTime: ""
+                            IsOpen: "Y",
+                            UseTime: "2024/12/13"
                         },
                         D: {
-                            IsOpen: "N",
+                            IsOpen: "Y",
                             UseTime: ""
                         },
                         Y: {
-                            IsOpen: "N",
-                            UseTime: ""
+                            IsOpen: "Y",
+                            UseTime: "2024/12/23"
                         }
                     },
                     HasSeenCompleteMsg: "N"
