@@ -32,12 +32,6 @@
             overflow: hidden;
         }
 
-        .entrance,
-        .main-container {
-            /* width: 100%; */
-            /* height: 100%; */
-        }
-
         .entrance {
             display: none;
             background: linear-gradient(45deg, rgba(55, 184, 78, 1) 0%, rgba(0, 121, 255, 1) 50%);
@@ -98,23 +92,23 @@
             animation-fill-mode: forwards;
         }
 
-        .main-container .box.first-look:nth-child(1) {
+        .main-container .box.first-look:nth-of-type(1) {
             animation-delay: 1.5s;
         }
 
-        .main-container .box.first-look:nth-child(2) {
+        .main-container .box.first-look:nth-of-type(2) {
             animation-delay: 2s;
         }
 
-        .main-container .box.first-look:nth-child(3) {
+        .main-container .box.first-look:nth-of-type(3) {
             animation-delay: 2.5s;
         }
 
-        .main-container .box.first-look:nth-child(4) {
+        .main-container .box.first-look:nth-of-type(4) {
             animation-delay: 3s;
         }
 
-        .main-container .box.first-look:nth-child(5) {
+        .main-container .box.first-look:nth-of-type(5) {
             animation-delay: 3.5s;
         }
 
@@ -147,67 +141,67 @@
             border-radius: 8px;
         }
 
-        .main-container .box:nth-child(1)::before,
-        .main-container .box:nth-child(1)::after,
-        .main-container .box:nth-child(1) span::before,
-        .main-container .box:nth-child(1) span::after {
+        .main-container .box:nth-of-type(1)::before,
+        .main-container .box:nth-of-type(1)::after,
+        .main-container .box:nth-of-type(1) span::before,
+        .main-container .box:nth-of-type(1) span::after {
             /* background: linear-gradient(45deg, #ffbc00, #ff0058); */
             background: #ffbc00;
         }
 
-        .main-container .box:nth-child(1)>.stamp {
+        .main-container .box:nth-of-type(1)>.stamp {
             color: #ffbc00;
             border-color: #ffbc00;
         }
 
-        .main-container .box:nth-child(2)::before,
-        .main-container .box:nth-child(2)::after,
-        .main-container .box:nth-child(2) span::before,
-        .main-container .box:nth-child(2) span::after {
+        .main-container .box:nth-of-type(2)::before,
+        .main-container .box:nth-of-type(2)::after,
+        .main-container .box:nth-of-type(2) span::before,
+        .main-container .box:nth-of-type(2) span::after {
             /* background: linear-gradient(45deg, #03a9f4, #ff0058); */
             background: #03a9f4;
         }
 
-        .main-container .box:nth-child(2)>.stamp {
+        .main-container .box:nth-of-type(2)>.stamp {
             color: #03a9f4;
             border-color: #03a9f4;
         }
 
-        .main-container .box:nth-child(3)::before,
-        .main-container .box:nth-child(3)::after,
-        .main-container .box:nth-child(3) span::before,
-        .main-container .box:nth-child(3) span::after {
+        .main-container .box:nth-of-type(3)::before,
+        .main-container .box:nth-of-type(3)::after,
+        .main-container .box:nth-of-type(3) span::before,
+        .main-container .box:nth-of-type(3) span::after {
             /* background: linear-gradient(45deg, #4dff03, #00d0ff); */
             background: #4dff03;
         }
 
-        .main-container .box:nth-child(3)>.stamp {
+        .main-container .box:nth-of-type(3)>.stamp {
             color: #4dff03;
             border-color: #4dff03;
         }
 
-        .main-container .box:nth-child(4)::before,
-        .main-container .box:nth-child(4)::after,
-        .main-container .box:nth-child(4) span::before,
-        .main-container .box:nth-child(4) span::after {
+        .main-container .box:nth-of-type(4)::before,
+        .main-container .box:nth-of-type(4)::after,
+        .main-container .box:nth-of-type(4) span::before,
+        .main-container .box:nth-of-type(4) span::after {
             background: #fd5050;
             /* background: linear-gradient(45deg, #de0ed7, #8df604); */
         }
 
-        .main-container .box:nth-child(4)>.stamp {
+        .main-container .box:nth-of-type(4)>.stamp {
             color: #fd5050;
             border-color: #fd5050;
         }
 
-        .main-container .box:nth-child(5)::before,
-        .main-container .box:nth-child(5)::after,
-        .main-container .box:nth-child(5) span::before,
-        .main-container .box:nth-child(5) span::after {
+        .main-container .box:nth-of-type(5)::before,
+        .main-container .box:nth-of-type(5)::after,
+        .main-container .box:nth-of-type(5) span::before,
+        .main-container .box:nth-of-type(5) span::after {
             /* background: linear-gradient(45deg, #ff2d03, #00d0ff); */
             background: #735ee9;
         }
 
-        .main-container .box:nth-child(5)>.stamp {
+        .main-container .box:nth-of-type(5)>.stamp {
             color: #735ee9;
             border-color: #735ee9;
         }
@@ -298,7 +292,7 @@
             border: 2px solid transparent;
             padding: 1px 5px;
             box-shadow: -3px 3px black;
-            transition: top ease-out 0.5s, right ease-out 0.5s;
+            transition: top ease-out 0.8s, right ease-out 0.8s;
         }
 
         .main-container .box:not(.back).used>.stamp {
@@ -309,11 +303,11 @@
         }
 
         /* hashtag */
-        .main-container .box:nth-child(1) .content p::before,
-        .main-container .box:nth-child(2) .content p::before,
-        .main-container .box:nth-child(3) .content p::before,
-        .main-container .box:nth-child(4) .content p::before,
-        .main-container .box:nth-child(5) .content p::before {
+        .main-container .box:nth-of-type(1) .content p::before,
+        .main-container .box:nth-of-type(2) .content p::before,
+        .main-container .box:nth-of-type(3) .content p::before,
+        .main-container .box:nth-of-type(4) .content p::before,
+        .main-container .box:nth-of-type(5) .content p::before {
             display: block;
             position: absolute;
             left: 0;
@@ -323,24 +317,39 @@
             white-space: nowrap;
         }
 
-        .main-container .box:nth-child(1) .content p::before {
+        .main-container .box:nth-of-type(1) .content p::before {
             content: "#沉浸式實境解謎 #松菸";
         }
 
-        .main-container .box:nth-child(2) .content p::before {
+        .main-container .box:nth-of-type(2) .content p::before {
             content: "#Chill感滿滿的餐廳 #信義區";
         }
 
-        .main-container .box:nth-child(3) .content p::before {
+        .main-container .box:nth-of-type(3) .content p::before {
             content: "#阿掌的早晨日常!? #大安區";
         }
 
-        .main-container .box:nth-child(4) .content p::before {
+        .main-container .box:nth-of-type(4) .content p::before {
             content: "#鯊宜開心果 #延吉街";
         }
 
-        .main-container .box:nth-child(5) .content p::before {
+        .main-container .box:nth-of-type(5) .content p::before {
             content: "#就是彌生軒 #下班 5 分鐘";
+        }
+
+        .main-container>.refresh {
+            display: block;
+            position: absolute;
+            top: 32px;
+            left: 32px;
+            width: 32px;
+            height: 32px;
+            z-index: 3;
+            transition: transform ease-out 0.5s;
+        }
+
+        .main-container>.refresh.rotate {
+            transform: rotate(180deg);
         }
 
         @keyframes appear {
@@ -357,6 +366,7 @@
         <input class="btn" type="button" value="領取生日禮物">
     </div>
     <div class="main-container">
+        <img class="refresh" src="arrows-rotate-solid.svg" alt="">
         <div class="box" id="M">
             <span></span>
             <div class="content">
@@ -469,6 +479,24 @@
                 }
             }
         });
+
+        // refresh
+        var refreshRotate = 0;
+        $(".main-container").on("click", ".refresh", function (event) {
+            refreshRotate += 180;
+            var target = $(event.currentTarget);
+            console.log(`rotate(${refreshRotate}deg)`);
+            target.css("transform", `rotate(${refreshRotate}deg)`);
+
+            $(".main-container .box.used").each(function (index, element) {
+                $(element).removeClass("used");
+                setTimeout(function () {
+                    $(element).addClass("used");
+                }, 300);
+
+            });
+        });
+
 
         function showGiftBlock() {
             $(".main-container").css("opacity", "1");
