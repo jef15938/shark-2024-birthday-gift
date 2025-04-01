@@ -340,10 +340,10 @@
         .main-container>.refresh {
             display: block;
             position: absolute;
-            top: 32px;
-            left: 32px;
-            width: 32px;
-            height: 32px;
+            top: 24px;
+            left: 24px;
+            width: 50px;
+            height: 50px;
             z-index: 11;
             transition: transform ease-out 0.5s;
         }
@@ -366,7 +366,7 @@
         <input class="btn" type="button" value="領取生日禮物">
     </div>
     <div class="main-container">
-        <img class="refresh" src="arrows-rotate-solid.svg" alt="">
+        <img class="refresh" src="arrows-rotate-solid.svg" alt="" style="display: none;">
         <div class="box" id="M">
             <span></span>
             <div class="content">
@@ -447,9 +447,12 @@
                 var useTime = userConfig.Gift[id].UseTime;
                 if (useTime !== "") {
                     targetElement.find(">.stamp").text(useTime + " 已使用");
+                    $(".main-container > .refresh").show();
                     setTimeout(function () {
                         targetElement.addClass("used");
                     }, 100);
+
+
                 }
             }
         });
@@ -485,7 +488,6 @@
         $(".main-container").on("click", ".refresh", function (event) {
             refreshRotate += 180;
             var target = $(event.currentTarget);
-            console.log(`rotate(${refreshRotate}deg)`);
             target.css("transform", `rotate(${refreshRotate}deg)`);
 
             $(".main-container .box.used").each(function (index, element) {
@@ -531,6 +533,8 @@
                 window.localStorage.setItem("config", JSON.stringify(userConfig));
                 boxElement.find(">.stamp").text(useTime + " 已使用");
                 boxElement.addClass("used");
+
+                $(".main-container > .refresh").show();
 
                 // 若全部用完
                 if (userConfig.HasSeenCompleteMsg === "N") {
