@@ -565,58 +565,58 @@
         function getConfig() {
             var config = window.localStorage.getItem("config");
             if (config === null) {
-                config = {
-                    ShowGetGiftBtn: "Y",
-                    Gift: {
-                        M: {
-                            IsOpen: "N",
-                            UseTime: ""
-                        },
-                        A: {
-                            IsOpen: "N",
-                            UseTime: ""
-                        },
-                        N: {
-                            IsOpen: "N",
-                            UseTime: ""
-                        },
-                        D: {
-                            IsOpen: "N",
-                            UseTime: ""
-                        },
-                        Y: {
-                            IsOpen: "N",
-                            UseTime: ""
-                        }
-                    },
-                    HasSeenCompleteMsg: "N"
-                }
                 // config = {
-                //     ShowGetGiftBtn: "N",
+                //     ShowGetGiftBtn: "Y",
                 //     Gift: {
                 //         M: {
-                //             IsOpen: "Y",
-                //             UseTime: "2024/12/16"
+                //             IsOpen: "N",
+                //             UseTime: ""
                 //         },
                 //         A: {
-                //             IsOpen: "Y",
-                //             UseTime: "2024/12/09"
+                //             IsOpen: "N",
+                //             UseTime: ""
                 //         },
                 //         N: {
-                //             IsOpen: "Y",
-                //             UseTime: "2024/12/13"
+                //             IsOpen: "N",
+                //             UseTime: ""
                 //         },
                 //         D: {
-                //             IsOpen: "Y",
+                //             IsOpen: "N",
                 //             UseTime: ""
                 //         },
                 //         Y: {
-                //             IsOpen: "Y",
-                //             UseTime: "2024/12/23"
+                //             IsOpen: "N",
+                //             UseTime: ""
                 //         }
                 //     },
                 //     HasSeenCompleteMsg: "N"
                 // }
+                config = {
+                    ShowGetGiftBtn: "N",
+                    Gift: {
+                        M: {
+                            IsOpen: "Y",
+                            UseTime: "2024/12/16"
+                        },
+                        A: {
+                            IsOpen: "Y",
+                            UseTime: "2024/12/09"
+                        },
+                        N: {
+                            IsOpen: "Y",
+                            UseTime: "2024/12/13"
+                        },
+                        D: {
+                            IsOpen: "Y",
+                            UseTime: "2025/01/05"
+                        },
+                        Y: {
+                            IsOpen: "Y",
+                            UseTime: "2024/12/23"
+                        }
+                    },
+                    HasSeenCompleteMsg: "Y"
+                }
                 window.localStorage.setItem("config", JSON.stringify(config));
             } else {
                 config = JSON.parse(config);
